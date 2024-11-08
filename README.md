@@ -28,13 +28,13 @@ Create the script that will run the Kiosk:
 
 ```
 mkdir -p /home/pi/kiosk
-sudo cp kiosk.sh /home/pi/kiosk/kiosk.sh
+cp kiosk.sh /home/pi/kiosk/kiosk.sh
 ```
 
 Copy over the SystemD unit file to run the `kiosk` service:
 
 ```
-cp kiosk.service /lib/systemd/system/kiosk.service
+sudo cp kiosk.service /lib/systemd/system/kiosk.service
 ```
 
 Enable the Systemd `kiosk` service so it will automatically run at system boot:
