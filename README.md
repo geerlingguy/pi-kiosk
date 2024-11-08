@@ -28,7 +28,7 @@ Create the script that will run the Kiosk:
 
 ```
 mkdir -p /home/pi/kiosk
-cp kiosk.sh /home/pi/kiosk/kiosk.sh
+sudo cp kiosk.sh /home/pi/kiosk/kiosk.sh
 ```
 
 Copy over the SystemD unit file to run the `kiosk` service:
