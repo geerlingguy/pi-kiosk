@@ -68,6 +68,7 @@ You can also set the display to be rotated during boot (either with the Pi Deskt
 ```
 video=DSI-1:panel_orientation=left_side_up
 ```
+Options are "normal", "upside_down", "left_side_up", or "right_side_up".
 
 ## Power Savings
 
