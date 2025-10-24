@@ -27,14 +27,15 @@ sudo apt install unclutter
 Create the script that will run the Kiosk:
 
 ```
-mkdir -p /home/pi/kiosk
-cp kiosk.sh /home/pi/kiosk/kiosk.sh
+mkdir -p /home/$USER/kiosk
+cp kiosk.sh /home/$USER/kiosk/kiosk.sh
 ```
 
 Copy over the SystemD unit file to run the `kiosk` service:
 
 ```
 sudo cp kiosk.service /lib/systemd/system/kiosk.service
+sed -i "s/USER_HERE/$USER/" /lib/systemd/system/kiosk.service
 ```
 
 Enable the Systemd `kiosk` service so it will automatically run at system boot:

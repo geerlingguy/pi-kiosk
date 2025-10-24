@@ -8,8 +8,8 @@ Environment="DISPLAY=:0"
 Type=simple
 ExecStart=/bin/bash /home/pi/kiosk/kiosk.sh
 Restart=on-abort
-User=pi
-Group=pi
+User=USER_HERE
+Group=USER_HERE
 
 [Install]
 WantedBy=graphical.target
