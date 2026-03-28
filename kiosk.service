@@ -6,7 +6,7 @@ After=graphical.target
 [Service]
 Environment="DISPLAY=:0"
 Type=simple
-ExecStart=/bin/bash /home/pi/kiosk/kiosk.sh
+ExecStart=/bin/bash /home/USER_HERE/kiosk/kiosk.sh
 Restart=on-abort
 User=USER_HERE
 Group=USER_HERE
