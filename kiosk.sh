@@ -9,8 +9,10 @@ KIOSK_URL="http://homeassistant.mmoffice.net:8123/"
 # don't wait, there are errors at boot and you have to start kiosk manually.
 sleep 8
 
-echo 'Hiding the mouse cursor...'
-unclutter -idle 0.1 -root &
+# Unclutter may still be useful for older versions of Pi OS.
+# See: https://github.com/geerlingguy/pi-kiosk/issues/11
+# echo 'Hiding the mouse cursor...'
+# unclutter -idle 0.1 -root &
 
 echo 'Starting Chromium...'
 /usr/bin/chromium --noerrdialogs --disable-infobars --kiosk --app=$KIOSK_URL

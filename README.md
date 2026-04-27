@@ -18,10 +18,12 @@ For my own Kiosk, I'm using the following hardware to display a Home Assistant d
 
 Ensure you're running Pi OS with a graphical interface (the 'full install'), and Chromium is installed (it should be, by default).
 
-Then open up Terminal and install a prerequisite:
+Open Terminal, and clone this repository:
 
 ```
-sudo apt install unclutter
+cd /home/$USER/Downloads
+git clone https://github.com/geerlingguy/pi-kiosk.git
+cd pi-kiosk
 ```
 
 Create the script that will run the Kiosk:
@@ -35,7 +37,7 @@ Copy over the SystemD unit file to run the `kiosk` service:
 
 ```
 sudo cp kiosk.service /lib/systemd/system/kiosk.service
-sed -i "s/USER_HERE/$USER/" /lib/systemd/system/kiosk.service
+sudo sed -i "s/USER_HERE/$USER/" /lib/systemd/system/kiosk.service
 ```
 
 Enable the Systemd `kiosk` service so it will automatically run at system boot:
